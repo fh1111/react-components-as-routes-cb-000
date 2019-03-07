@@ -1,6 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+import { BrowserRouter as Router, Route } from 'react-router-dom';
+
 const Home = () => {
   return (
     <div>
@@ -10,6 +12,8 @@ const Home = () => {
 };
 
 ReactDOM.render(
-  <Home />,
+  <Router>
+    <Route path="/" render={Home} />
+  </Router>),
   document.getElementById('root')
 );
